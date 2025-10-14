@@ -19,7 +19,7 @@ class RegisterPage extends StatelessWidget {
     // get aut service
     final _auth = AuthService();
 
-    // passwords match => create user
+    // passwords match -> create user
     if (_pwController.text == _confirmPwController.text) {
       try {
         _auth.signUpWithEmailPassword(
