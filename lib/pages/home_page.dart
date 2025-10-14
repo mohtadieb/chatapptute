@@ -1,4 +1,5 @@
 import 'package:chatapptute/auth/auth_service.dart';
+import 'package:chatapptute/components/my_drawer.dart';
 import 'package:flutter/material.dart';
 
 
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
           IconButton(onPressed: logout, icon: Icon(Icons.logout))
         ],
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
