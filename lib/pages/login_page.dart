@@ -8,6 +8,8 @@ class LoginPage extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _pwController = TextEditingController();
 
+  FocusNode myFocusNode = FocusNode();
+
   //tap to go to register page
   final void Function()? onTap;
 

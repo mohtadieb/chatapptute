@@ -17,7 +17,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text("Home")),
+          title: Text("Home"),
+          backgroundColor: Colors.transparent,
+          foregroundColor: Colors.grey,
+          elevation: 0,
+      ),
       drawer: const MyDrawer(),
       body: _buildUserList(),
     );
@@ -52,10 +56,8 @@ class HomePage extends StatelessWidget {
 
   // build individual list tile for user
   Widget _buildUserListItem(
-    Map<String, dynamic> userData,
-    BuildContext context,
-  ) {
-  // display all users except current user
+    Map<String, dynamic> userData, BuildContext context,) {
+    // display all users except current user
     if(userData['email'] != _authService.getCurrentUser()!.email) {
       return UserTile(
         text: userData["email"],
