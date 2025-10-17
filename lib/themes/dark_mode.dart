@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 ThemeData darkMode = ThemeData(
-    appBarTheme: AppBarThemeData(backgroundColor: Colors.red),
     colorScheme: ColorScheme.dark(
       surface: Colors.grey.shade900,
       primary: Colors.grey.shade600,
