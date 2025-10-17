@@ -62,7 +62,7 @@ class _ChatPageState extends State<ChatPage> {
   final ScrollController _scrollController = ScrollController();
   void scrollDown() {
     _scrollController.animateTo(_scrollController.position.maxScrollExtent,
-        duration: const Duration(seconds: 1),
+        duration: const Duration(milliseconds: 500),
         curve: Curves.fastOutSlowIn,
     );
   }
@@ -134,11 +134,9 @@ class _ChatPageState extends State<ChatPage> {
     // is current user
     bool isCurrentUser = data['senderID'] == _authService.getCurrentUser()!.uid;
 
-    // align message to the right if sender is the current user, otherwise left
-    var alignment =
-        isCurrentUser ? Alignment.centerRight : Alignment.centerLeft;
 
     return Column(
+      // align message to the right if sender is the current user, otherwise left
       crossAxisAlignment: isCurrentUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
       children: [
         ChatBubble(

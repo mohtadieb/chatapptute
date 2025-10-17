@@ -10,8 +10,6 @@ class RegisterPage extends StatelessWidget {
   final TextEditingController _pwController = TextEditingController();
   final TextEditingController _confirmPwController = TextEditingController();
 
-  FocusNode myFocusNode = FocusNode();
-
   //tap to go to login page
   final void Function()? onTap;
 
@@ -77,8 +75,7 @@ class RegisterPage extends StatelessWidget {
             const SizedBox(height: 21),
 
             //email textfield
-            MyTextField(
-              hintText: 'Email',
+            MyTextField(hintText: 'Email',
               obscureText: false,
               controller: _emailController,
             ),
